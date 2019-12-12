@@ -26,20 +26,20 @@ num_galhos = int(input())
 
 for i in range(0, num_galhos):
     num_pacotes = int(input())
-    qnt_efeites = [None]*num_pacotes
+    qnt_enfeites = [None]*num_pacotes
     peso_pacote = [None]*num_pacotes
     capacidade_galho = int(input())
 
     for j in range(0, num_pacotes):
-        qnt_efeites[j], peso_pacote[j] = input().split()
-    qnt_efeites = list(map(int, qnt_efeites))
+        qnt_enfeites[j], peso_pacote[j] = input().split()
+    qnt_enfeites = list(map(int, qnt_enfeites))
     peso_pacote = list(map(int, peso_pacote))
 
-    num_total = prog_dinamica_mochila(num_pacotes, qnt_efeites, peso_pacote, capacidade_galho)
+    num_total = prog_dinamica_mochila(num_pacotes, qnt_enfeites, peso_pacote, capacidade_galho)
 
     num_pacotes = None
     capacidade_galho = None
-    qnt_efeites = []
+    qnt_enfeites = []
     peso_pacote = []
 
     print("Galho " + str(i+1) + ":")
